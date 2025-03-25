@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import UseStateAdvance from "./useState/final/useState-advanced";
 
 import "./App.css";
 
-// useState();
 function App() {
-  useState();
-  // const onClickButton = (e) => {
-  //   console.log("button clicked!", e);
-  // };
   return (
     <div className="App">
-      <h1>Hello Hooks</h1>
+      <UseStateAdvance />
     </div>
   );
 }
