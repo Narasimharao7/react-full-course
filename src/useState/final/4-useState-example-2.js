@@ -5,18 +5,31 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onChangeFirstName = (e) => {
-    setFirstName(e.target.value);
-    // console.log("form submitted");
-  };
+  //first way...
+  // const onChangeFirstName = (e) => {
+  //   setFirstName(e.target.value);
+  //   // console.log("form submitted");
+  // };
 
-  const onChangeEmail = (e) => {
-    setEmail(e.target.value);
-  };
+  // const onChangeEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const onChangePassword = (e) => {
-    setPassword(e.target.value);
-  };
+  // const onChangePassword = (e) => {
+  //   setPassword(e.target.value);
+  // };
+
+  // Second way...
+  // const handleInput = (e, name) => {
+  //   // console.log(e.target.value, name);
+  //   if (name === "firstName") {
+  //     setFirstName(e.target.value);
+  //   } else if (name === "email") {
+  //     setEmail(e.target.value);
+  //   } else if (name === "password") {
+  //     setPassword(e.target.value);
+  //   }
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +44,7 @@ const Index = () => {
             id="name"
             value={firstName}
             placeholder="Enter your Name"
-            onChange={onChangeFirstName}
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
         <div className="form-container">
@@ -41,7 +54,7 @@ const Index = () => {
             id="email"
             value={email}
             placeholder="Enter your Email"
-            onChange={onChangeEmail}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form-container">
@@ -51,7 +64,7 @@ const Index = () => {
             id="password"
             value={password}
             placeholder="Enter your Password"
-            onChange={onChangePassword}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div>
